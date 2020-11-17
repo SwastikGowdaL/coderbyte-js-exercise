@@ -9,7 +9,17 @@
 //
 // Input:"1:23am-1:08am"
 // Output:1425
-let a=prompt();
-function CountingMinutesI(str){
 
-}
+// python solution - 
+//  minutes = lambda x: (a[1] - a[0]).seconds / 60 if not (a:=list((d:=__import__("datetime")).datetime.strptime(i, "%I:%M%p")
+// for i in __import__("re").findall(r'\d{1,2}:\d{2}[ap]m', x)))[0].strftime("%p") == "PM" and a[1].strftime("%p") == "AM" else (a[1] + d.timedelta(1) - a[0]).seconds / 60 
+  
+// another python solution -
+// times = []
+// for time in input("Timespan?\n").split("-"):
+//     hour, minutes = time.replace('pm', '').replace('am', '').split(':')
+//     times.append([12 * 60 + int(hour) * 60 + int(minutes)]) if 'pm' in time else times.append(
+//         [int(hour) * 60 + int(minutes)])
+// solution = 1440 - (times[0][0] - times[1][0]) if 1440 - (times[0][0] - times[1][0]) < 1440 else (
+//             times[0][0] - times[1][0])
+// print(solution if solution > 0 else solution * -1)
